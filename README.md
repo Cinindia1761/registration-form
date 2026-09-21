@@ -21,6 +21,16 @@ Expected payload fields are `fullName`, `designation`, `organisation`, `organisa
 
 ## GitHub Pages
 
-Create a repository named `CINI-state-registration`, push this project to its `main` branch, and enable **Settings > Pages > GitHub Actions**. The workflow will publish the site at `https://USERNAME.github.io/CINI-state-registration/`. Use that final URL, not a local development URL, to create the QR code.
+Create a public GitHub repository, push this project to its `main` branch, and enable **Settings > Pages > GitHub Actions**. The included workflow publishes the site at:
+
+`https://USERNAME.github.io/REPOSITORY-NAME/`
+
+Use the published HTTPS URL, not a local `file://` or `localhost` URL, to create the QR code. GitHub Pages hosts the static form only; it does not store registrations by itself.
+
+The header keeps the CINI and NASCOM Foundation logos in one flex container. Both use proportional sizing at `64px` on desktop and `48px` on mobile, with responsive adjustments for narrow screens.
+
+## Registration storage
+
+The browser submits registrations to `POST /api/registrations` when `API_BASE_URL` in `src/api.js` is configured. Connect that endpoint to a backend and database before collecting real submissions. The backend should validate the payload, store the fields in explicit database columns, and keep secrets out of this repository.
 
 No registration data is stored in localStorage, committed to the repository, or placed in URL parameters. Do not commit secrets or `.env` files.
