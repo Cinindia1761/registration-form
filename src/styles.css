@@ -1,6 +1,8 @@
 /* Partner logos */
 .logo-container{display:flex;align-items:center;gap:14px}
 .logo-container img{height:64px;width:auto;object-fit:contain;display:block}
+.cisco-logo{width:190px;height:auto;display:block;flex:0 1 auto}
+.logo-container .cini-logo,.logo-container .nascom-logo{width:auto}
 @media (max-width:768px){
 	.header-inner{gap:12px;justify-content:center}
 	.logo-container{gap:12px}
