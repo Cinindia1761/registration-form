@@ -3,7 +3,7 @@
 .cini-logo{width:62px!important;height:62px;object-fit:contain}
 .cisco-logo{width:190px;height:auto}
 .nascom-logo{width:238px!important;height:auto;margin-left:auto}
-.header-rule{height:34px;margin-left:auto}
+.header-rule{height:34px;margin-left:0!important}
 @media (max-width:720px){
 	.header-inner{gap:12px}
 	.cisco-logo{width:145px!important}
