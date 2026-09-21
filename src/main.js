@@ -77,11 +77,7 @@ form.addEventListener('submit', async (event) => {
       statusMessage.innerHTML = '<strong>Registration service is being connected.</strong><span>Your details have not been stored. Please contact the event team for submission support.</span>';
       return;
     }
-    const reference = result.data?.referenceId ? ` Reference ID: ${result.data.referenceId}` : '';
-    statusMessage.className = 'status-message status-success';
-    statusMessage.innerHTML = `<strong>Registration Submitted Successfully</strong><span>${reference}</span>`;
-    form.reset();
-    syncOtherOrganisationField();
+    window.location.assign('thank-you.html');
   } catch (error) {
     console.error(error);
     statusMessage.className = 'status-message status-error';

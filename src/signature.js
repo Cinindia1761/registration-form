@@ -42,6 +42,7 @@ export function setupSignature(canvas, clearButton, placeholder) {
   canvas.addEventListener('pointerdown', start);
   canvas.addEventListener('pointermove', draw);
   canvas.addEventListener('pointerup', end);
+  canvas.addEventListener('pointercancel', end);
   canvas.addEventListener('pointerleave', end);
   clearButton.addEventListener('click', () => {
     context.clearRect(0, 0, canvas.width, canvas.height);

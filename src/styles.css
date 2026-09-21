@@ -7,6 +7,7 @@
 .header-inner .header-rule{margin-left:0}
 .logo-container .cini-logo,.logo-container .nascom-logo{width:auto;max-width:100%}
 .consent-section .radio-card > span:last-child{color:#000}
+.consent-section .privacy-note,.consent-section .privacy-note strong{color:#000}
 @media (max-width:768px){
 	.header-inner{gap:12px;justify-content:center}
 	.logo-container{gap:0}
@@ -23,6 +24,19 @@
 	.header-inner{gap:6px}
 	.logo-container > .brand-link,.logo-container > .nascom-logo{flex-basis:96px;width:96px;padding-inline:8px}
 	.cisco-logo{width:96px}
+.thank-you-page{min-height:100vh;display:grid;grid-template-rows:auto 1fr auto;background:var(--paper)}
+.thank-you-main{display:grid;place-items:center;padding:56px 20px}
+.thank-you-panel{width:min(620px,100%);padding:56px 48px;text-align:center;background:var(--white);border-top:4px solid var(--orange);box-shadow:var(--shadow)}
+.success-mark{width:68px;height:68px;margin:0 auto 24px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:var(--brown);font-size:34px;font-weight:800}
+.thank-you-panel h1{max-width:none;font-size:clamp(2.4rem,6vw,4rem)}
+.thank-you-panel p{margin:16px auto 0;color:var(--muted);font-size:18px}
+.thank-you-panel .thank-you-support{margin-top:8px;font-size:14px}
+.thank-you-button{display:inline-flex;margin-top:30px;text-decoration:none}
+.thank-you-page .site-footer .shell{justify-content:center}
+@media (max-width:600px){
+	.thank-you-main{padding:32px 14px}
+	.thank-you-panel{padding:42px 22px}
+}
 }
 @media (max-width:300px){
 	.logo-container > .brand-link,.logo-container > .nascom-logo{flex-basis:80px;width:80px;padding-inline:6px}

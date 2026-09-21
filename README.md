@@ -33,4 +33,6 @@ The header keeps the CINI and NASCOM Foundation logos in one flex container. Bot
 
 The browser submits registrations to `POST /api/registrations` when `API_BASE_URL` in `src/api.js` is configured. Connect that endpoint to a backend and database before collecting real submissions. The backend should validate the payload, store the fields in explicit database columns, and keep secrets out of this repository.
 
+When the API accepts a valid registration, the form redirects to `thank-you.html`. Validation errors and API failures keep the participant on the registration form.
+
 No registration data is stored in localStorage, committed to the repository, or placed in URL parameters. Do not commit secrets or `.env` files.
