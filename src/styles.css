@@ -6,6 +6,7 @@
 .header-inner{justify-content:center}
 .header-inner .header-rule{margin-left:0}
 .logo-container .cini-logo,.logo-container .nascom-logo{width:auto;max-width:100%}
+.consent-section .radio-card > span:last-child{color:#000}
 @media (max-width:768px){
 	.header-inner{gap:12px;justify-content:center}
 	.logo-container{gap:0}
