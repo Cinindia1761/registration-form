@@ -17,7 +17,7 @@ This is a plain static site. Open `index.html` directly, or run `npx serve .` fr
 
 Edit `src/api.js` and set `API_BASE_URL` to the HTTPS server origin, for example `https://api.example.org`. The adapter then sends a `POST /api/registrations` request. Until configured, the page clearly reports that the registration service is being connected and does not claim to store data.
 
-Expected payload fields are `fullName`, `designation`, `organisation`, `organisationType`, `state`, `district`, `block`, `email`, `mobile`, `alternateContact`, `documentationConsent`, `digitalSignature`, and `submittedAt` (ISO timestamp). The expected response may include `referenceId`.
+Expected payload fields are `fullName`, `designation`, `organisation`, `organisationType`, `otherOrganisationType` (when `organisationType` is `Other`), `state`, `district`, `block`, `email`, `mobile`, `alternateContact`, `documentationConsent`, `digitalSignature`, and `submittedAt` (ISO timestamp). The expected response may include `referenceId`.
 
 ## GitHub Pages
 

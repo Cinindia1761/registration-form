@@ -18,6 +18,9 @@ export function validateForm(form) {
     errors.alternateContact = 'Enter 10 digits starting with 5, 6, 7, 8 or 9.';
   }
   if (!values.documentationConsent) errors.documentationConsent = 'Please select one consent option.';
+  if (values.organisationType === 'Other' && !String(values.otherOrganisationType || '').trim()) {
+    errors.otherOrganisationType = 'Please describe the type of organisation.';
+  }
 
   return { values, errors };
 }

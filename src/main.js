@@ -13,6 +13,9 @@ const districtBlocks = {
 const form = document.querySelector('#registration-form');
 const district = document.querySelector('#district');
 const block = document.querySelector('#block');
+const organisationType = document.querySelector('#organisationType');
+const otherOrganisationField = document.querySelector('#other-organisation-field');
+const otherOrganisationType = document.querySelector('#otherOrganisationType');
 const statusMessage = document.querySelector('#status-message');
 const submitButton = document.querySelector('#submit-button');
 const signature = setupSignature(
@@ -31,6 +34,16 @@ function showErrors(errors) {
     if (input) input.setAttribute('aria-invalid', 'true');
   });
 }
+
+function syncOtherOrganisationField() {
+  const isOther = organisationType.value === 'Other';
+  otherOrganisationField.hidden = !isOther;
+  otherOrganisationType.disabled = !isOther;
+  if (!isOther) otherOrganisationType.value = '';
+}
+
+organisationType.addEventListener('change', syncOtherOrganisationField);
+syncOtherOrganisationField();
 
 district.addEventListener('change', () => {
   const options = districtBlocks[district.value] || [];
@@ -68,6 +81,7 @@ form.addEventListener('submit', async (event) => {
     statusMessage.className = 'status-message status-success';
     statusMessage.innerHTML = `<strong>Registration Submitted Successfully</strong><span>${reference}</span>`;
     form.reset();
+    syncOtherOrganisationField();
   } catch (error) {
     console.error(error);
     statusMessage.className = 'status-message status-error';
