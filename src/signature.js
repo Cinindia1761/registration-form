@@ -22,6 +22,8 @@ export function setupSignature(canvas, clearButton, placeholder) {
     drawing = true;
     hasSignature = true;
     placeholder.hidden = true;
+    placeholder.classList.add('is-hidden');
+    placeholder.setAttribute('aria-hidden', 'true');
     const position = point(event);
     context.beginPath();
     context.moveTo(position.x, position.y);
@@ -48,6 +50,8 @@ export function setupSignature(canvas, clearButton, placeholder) {
     context.clearRect(0, 0, canvas.width, canvas.height);
     hasSignature = false;
     placeholder.hidden = false;
+    placeholder.classList.remove('is-hidden');
+    placeholder.setAttribute('aria-hidden', 'false');
   });
 
   return {

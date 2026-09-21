@@ -8,6 +8,7 @@
 .logo-container .cini-logo,.logo-container .nascom-logo{width:auto;max-width:100%}
 .consent-section .radio-card > span:last-child{color:#000}
 .consent-section .privacy-note,.consent-section .privacy-note strong{color:#000}
+.signature-placeholder.is-hidden{display:none}
 @media (max-width:768px){
 	.header-inner{gap:12px;justify-content:center}
 	.logo-container{gap:0}
