@@ -24,6 +24,7 @@ export function setupSignature(canvas, clearButton, placeholder) {
     placeholder.hidden = true;
     placeholder.classList.add('is-hidden');
     placeholder.setAttribute('aria-hidden', 'true');
+    canvas.setPointerCapture?.(event.pointerId);
     const position = point(event);
     context.beginPath();
     context.moveTo(position.x, position.y);
@@ -39,6 +40,7 @@ export function setupSignature(canvas, clearButton, placeholder) {
 
   function end() {
     drawing = false;
+    if (canvas.hasPointerCapture?.(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
   }
 
   canvas.addEventListener('pointerdown', start);

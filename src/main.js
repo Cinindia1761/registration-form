@@ -73,11 +73,10 @@ form.addEventListener('submit', async (event) => {
   try {
     const result = await submitRegistration(payload);
     if (!result.connected) {
-      statusMessage.className = 'status-message status-info';
-      statusMessage.innerHTML = '<strong>Registration service is being connected.</strong><span>Your details have not been stored. Please contact the event team for submission support.</span>';
+      window.location.assign('submission.html?status=offline');
       return;
     }
-    window.location.assign('thank-you.html');
+    window.location.assign(result.preview ? 'submission.html?preview=success' : 'submission.html');
   } catch (error) {
     console.error(error);
     statusMessage.className = 'status-message status-error';
