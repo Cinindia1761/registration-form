@@ -1,7 +1,7 @@
 /* Partner logos */
 .logo-container{display:flex;align-items:center;gap:14px}
 .logo-container img{height:72px;width:auto;object-fit:contain;display:block}
-.logo-container > .brand-link,.logo-container > .nascom-logo{flex:0 0 180px;width:180px;height:72px;display:grid;place-items:center;padding-inline:18px}
+.logo-container > .brand-link,.logo-container > .nasscom-logo{flex:0 0 180px;width:180px;height:72px;display:grid;place-items:center;padding-inline:18px}
 .cisco-logo{width:190px;height:auto;display:block;flex:0 1 auto}
 .header-inner{justify-content:center}
 .header-inner .header-rule{margin-left:0}
