@@ -1,13 +1,7 @@
 const API_BASE_URL = '';
 
-function isPreviewMode() {
-  return new URLSearchParams(window.location.search).get('preview') === 'success';
-}
-
 export async function submitRegistration(payload) {
   if (!API_BASE_URL.trim()) {
-    // This provides an explicit front-end-only test path. It never sends or stores data.
-    if (isPreviewMode()) return { connected: true, preview: true };
     return { connected: false };
   }
 

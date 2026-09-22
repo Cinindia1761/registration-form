@@ -37,6 +37,8 @@
 .thank-you-panel p{margin:17px auto 0;color:var(--muted);font-size:17px}
 .thank-you-panel .thank-you-support{margin-top:24px;color:var(--ink);font-size:15px;font-weight:600}
 .thank-you-button{display:inline-flex;margin-top:30px;text-decoration:none}
+.completion-card{display:flex;align-items:center;justify-content:center;gap:10px;margin:28px auto 0;padding:15px 18px;border:1px solid var(--line);background:#fcf8f0;color:var(--brown);font-size:14px}
+.completion-card span{display:grid;place-items:center;width:21px;height:21px;border-radius:50%;background:var(--orange);color:var(--brown);font-size:13px;font-weight:800}
 .preview-notice{max-width:390px;padding:11px 14px;background:#fff8e9;border-left:3px solid var(--orange);color:#7c5a18!important;font-size:13px!important;text-align:left}
 .thank-you-page .site-footer .shell{justify-content:center}
 @media (max-width:600px){
